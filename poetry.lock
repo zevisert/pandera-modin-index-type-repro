@@ -163,6 +163,7 @@ description = "A light-weight and flexible validation package for pandas data st
 category = "main"
 optional = false
 python-versions = ">=3.7"
+develop = false
 
 [package.dependencies]
 modin = {version = "*", optional = true, markers = "extra == \"modin-ray\""}
@@ -176,7 +177,7 @@ typing-inspect = ">=0.6.0"
 wrapt = "*"
 
 [package.extras]
-all = ["pyyaml (>=5.1)", "pyspark", "frictionless", "koalas", "modin", "ray (<=1.7.0)", "black", "hypothesis (>=5.41.1)", "dask", "scipy"]
+all = ["pyyaml (>=5.1)", "pyspark", "dask", "modin", "scipy", "black", "hypothesis (>=5.41.1)", "frictionless", "ray (<=1.7.0)", "koalas"]
 dask = ["dask"]
 hypotheses = ["scipy"]
 io = ["pyyaml (>=5.1)", "black", "frictionless"]
@@ -185,6 +186,12 @@ modin = ["modin", "ray (<=1.7.0)", "dask"]
 modin-dask = ["modin", "dask"]
 modin-ray = ["modin", "ray (<=1.7.0)"]
 strategies = ["hypothesis (>=5.41.1)"]
+
+[package.source]
+type = "git"
+url = "git@github.com:pandera-dev/pandera"
+reference = "master"
+resolved_reference = "cf37ced905001f2c532038ee933d744bf9f50bb7"
 
 [[package]]
 name = "protobuf"
@@ -322,7 +329,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "839558ee00c332dbf674990b45029f9dc9c5f6fb118b7c13a9bb85e09cce3a17"
+content-hash = "a604349c635c3552df44af50d2bdbf9333b5bc1dba38e333612102e7514c2d1c"
 
 [metadata.files]
 attrs = [
@@ -497,10 +504,7 @@ pandas-stubs = [
     {file = "pandas-stubs-1.2.0.38.tar.gz", hash = "sha256:9f16206e48ce7aaf499703a07e9196e40a62e3364149105fbe1f9a2f82efecf3"},
     {file = "pandas_stubs-1.2.0.38-py3-none-any.whl", hash = "sha256:e8b6eb5e4985c81d12c8446e9384dba04720f50957cc6d0c5d82b958da320fe2"},
 ]
-pandera = [
-    {file = "pandera-0.8.0-py3-none-any.whl", hash = "sha256:ac0c4bc28fe3ea55adb86379ae1e2f45f3120b0ba4b639b36d491da0f9ae28d0"},
-    {file = "pandera-0.8.0.tar.gz", hash = "sha256:86fc52ffde43ed3c16e646f74f12e4c9f39eac029abea9fa16d93d4a47be75b1"},
-]
+pandera = []
 protobuf = [
     {file = "protobuf-3.19.1-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:d80f80eb175bf5f1169139c2e0c5ada98b1c098e2b3c3736667f28cbbea39fc8"},
     {file = "protobuf-3.19.1-cp310-cp310-manylinux2014_aarch64.whl", hash = "sha256:a529e7df52204565bcd33738a7a5f288f3d2d37d86caa5d78c458fa5fabbd54d"},

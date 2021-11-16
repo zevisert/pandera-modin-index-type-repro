@@ -6,7 +6,7 @@ authors = ["Zev Isert <dev@zevisert.ca>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-pandera = {extras = ["modin-ray"], version = "^0.8.0"}
+pandera = {extras = ["modin-ray"], git = "git@github.com:pandera-dev/pandera"}
 
 [tool.poetry.scripts]
 repro = "repro.__main__:main"
